@@ -1,11 +1,12 @@
 // backend/index.js
 import express from "express";
 import mongoose from "mongoose";
-import { PORT, MONGODB_URL } from "./config.js";
+import { PORT } from "./config.js";
 import booksRouter from "./routes/books.route.js";
 import cors from "cors";
 
 const app = express();
+export const MONGODB_URL = "mongodb://127.0.0.1:27017/books";
 
 // Middleware to parse JSON
 app.use(express.json());
